@@ -1,0 +1,147 @@
+diff --git a/src/document/tag.rs b/src/document/tag.rs
+--- a/src/document/tag.rs
++++ b/src/document/tag.rs
+@@ -17,10 +17,14 @@ pub enum Tag {
+ impl Tag {
+     fn set_text(&mut self, text: String) {
+         match self {
+-            Tag::Compound(_, tail) => *tail = Some(text),
+-            Tag::Leaf(_, tail) => *tail = Some(text),
+-            Tag::Comment(_, _, tail) => *tail = Some(text),
+-            _ => {}
++            Tag::Compound(_, tail) | Tag::Leaf(_, tail) | Tag::Comment(_, _, tail) => {
++                if let Some(content) = tail {
++                    content.push_str(&text);
++                } else {
++                    *tail = Some(text);
++                }
++            }
++            Tag::Text(_, content) | Tag::CData(_, content) => content.push_str(&text),
+         }
+     }
+ 
+diff --git a/src/document/xml.rs b/src/document/xml.rs
+--- a/src/document/xml.rs
++++ b/src/document/xml.rs
+@@ -32,6 +32,13 @@ impl TryFrom<XmlEvent<'_>> for EventKind {
+                 let content = String::from_utf8(t.into_inner().to_vec()).expect("utf8");
+                 EventKind::Text(content)
+             }
++            XmlEvent::GeneralRef(r) => {
++                let name = String::from_utf8(r.into_inner().to_vec()).expect("utf8");
++                let content = unescape(&format!("&{name};"))
++                    .map_err(Error::from_err)?
++                    .into_owned();
++                EventKind::Text(content)
++            }
+             XmlEvent::CData(c) => {
+                 let content = String::from_utf8(c.into_inner().to_vec()).expect("utf8");
+                 EventKind::CData(content)
+@@ -328,4 +335,18 @@ mod tests {
+         let result = String::from_utf8(cursor.into_inner()).unwrap();
+         assert_eq!(result, input);
+     }
++
++    #[test]
++    fn test_character_reference_roundtrip() {
++        let input = r#"<svg><text>A &lt; B &amp; C &gt; D</text></svg>"#;
++        let mut buf_input = Cursor::new(input);
++        let input_list = InputList::from_reader(&mut buf_input).unwrap();
++        let output_list: OutputList = input_list.into();
++
++        let mut cursor = Cursor::new(Vec::new());
++        output_list.write_to(&mut cursor).unwrap();
++
++        let result = String::from_utf8(cursor.into_inner()).unwrap();
++        assert_eq!(result, input);
++    }
+ }
+diff --git a/src/elements/containers.rs b/src/elements/containers.rs
+--- a/src/elements/containers.rs
++++ b/src/elements/containers.rs
+@@ -17,20 +17,41 @@ impl EventGen for Container<'_> {
+     ) -> Result<(OutputList, Option<BoundingBox>)> {
+         if let Some(inner_events) = self.0.inner_events(context) {
+             // If there's only text/cdata events, apply to current element and render
+-            let mut inner_text = None;
++            let mut segments = Vec::new();
++            let mut has_cdata = false;
+             for e in inner_events.iter() {
+                 if let Some(t) = e.text_string() {
+-                    if inner_text.is_none() {
+-                        inner_text = Some(t);
+-                    }
++                    segments.push((t, false));
+                 } else if let Some(c) = e.cdata_string() {
+-                    inner_text = Some(c);
++                    segments.push((c, true));
++                    has_cdata = true;
+                 } else {
+                     // not text or cdata - abandon the effort and mark as such.
+-                    inner_text = None;
++                    segments.clear();
++                    has_cdata = false;
+                     break;
+                 }
+             }
++            if has_cdata {
++                while segments
++                    .first()
++                    .is_some_and(|(text, is_cdata)| !is_cdata && text.trim().is_empty())
++                {
++                    segments.remove(0);
++                }
++                while segments
++                    .last()
++                    .is_some_and(|(text, is_cdata)| !is_cdata && text.trim().is_empty())
++                {
++                    segments.pop();
++                }
++            }
++            let inner_text = (!segments.is_empty()).then(|| {
++                segments
++                    .into_iter()
++                    .map(|(text, _)| text)
++                    .collect::<String>()
++            });
+             if let Some(text) = &inner_text {
+                 let mut el = self.0.clone();
+                 el.set_attr("text", text);
+diff --git a/tests/integration_tests/text_attr.rs b/tests/integration_tests/text_attr.rs
+--- a/tests/integration_tests/text_attr.rs
++++ b/tests/integration_tests/text_attr.rs
+@@ -242,6 +242,34 @@ text</rect>
+     );
+ }
+ 
++#[test]
++fn test_text_content_character_references() {
++    let input = r#"
++<text xy="1 5">A &lt; B &amp; C &gt; D</text>
++"#;
++    let expected = r#"
++<text x="1" y="5" class="d-text">A &lt; B &amp; C &gt; D</text>
++"#;
++
++    assert_eq!(
++        transform_str_default(input).unwrap().trim(),
++        expected.trim()
++    );
++
++    for (input, expected) in [
++        (
++            r#"<text xy="1 5">A<![CDATA[B]]> &lt; C</text>"#,
++            r#"<text x="1" y="5" class="d-text">AB &lt; C</text>"#,
++        ),
++        (
++            r#"<text xy="1 5">A &lt; <![CDATA[B]]>C</text>"#,
++            r#"<text x="1" y="5" class="d-text">A &lt; BC</text>"#,
++        ),
++    ] {
++        assert_eq!(transform_str_default(input).unwrap().trim(), expected);
++    }
++}
++
+ #[test]
+ fn test_text_cdata() {
+     let input = r#"

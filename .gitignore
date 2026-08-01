@@ -1,0 +1,8 @@
+# Run workspaces — run material, never retained
+.runs/
+
+# Local scratch and work-products (matches docs/.local too)
+.local/
+
+.claude/
+
