@@ -28,19 +28,21 @@ The assignments and `guards.md` reach a Worker as verbatim instruction text. `ca
 
 What a run is dispatched against varies by run and is not stored. Where a case discriminates only under a run with a stated property — of its candidate, or of its structure — `case.md` states that property as a requirement. A list of the states already run is a log, and the case is not where it lives.
 
-A workspace is one Worker's working location for one run. It holds the resources that Worker's assignment lists, the candidate that governs it, and everything that Worker then produces.
+A workspace is one Worker's working location for one dispatch. It holds the resources that Worker's assignment lists, the candidate that governs it, and everything that Worker then produces.
 
 The candidate is the skill state this run tests, materialized into the workspace before dispatch: a base copy — installed, prior, or newly authored, as the run's purpose decides — with every change pending against it applied. The Worker is activated with the candidate and never with an installed package, so a run tests the state Wiz built rather than whatever the host happens to carry, and an iteration advances by rebuilding the candidate rather than by installing anything. A candidate is run material, discarded with the run; applying a pending change to one writes to no stored case.
 
-Each run gets its own directory under the run root, named for the skill under development and then for the case and the run:
+Each dispatch gets its own directory under the run root, named for the skill under development, then the case and the run, then the Worker dispatched:
 
 ```text
-<run-root>/<skill-under-development>/<case>-<run>/
-|-- workspace/           the Worker's, holding its material at dispatch and its work after
+<run-root>/<skill-under-development>/<case>-<run>-<worker>/
+|-- workspace/           this Worker's, holding its material at dispatch and its work after
 |   |-- candidate/       the package governing the Worker; absent where the run is a no-package baseline
 |   `-- resources/       what the assignment lists to act on
 `-- evidence/            Wiz's, holding the candidate's base and the changes applied to it, the text as delivered, the untouched first result, and each disposition with the surface establishing it
 ```
+
+`<worker>` numbers the dispatch, never the run: a single-Worker run still carries one, at 1. Where a run's design calls for more than one Worker against the same case and candidate — repeated trials, a consistency check, or any other comparison this suite runs at once — Wiz numbers the whole batch, 1 through N, in the one serial step that creates their directories, before dispatching any of them. No Worker learns or chooses its own number, so however many are dispatched together, none can resolve to another's directory.
 
 A case's `test-resources/` arrives as `resources/`. The stored name is the evaluator's and reaches no Worker: a directory named for testing tells a Worker it is being tested, and no assignment can take that back.
 
