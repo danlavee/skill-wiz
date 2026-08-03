@@ -21,10 +21,12 @@ tc<n>/
 |-- test-resources/     what the assignment gives a run to work with; copied into a workspace as resources/
 |-- assignment.md       the ordinary assignment under test
 |-- guards.md           scope limits particular to this case, if it has any
+|-- preliminary-run.md  optional: assignment for a preliminary run that generates the defect live
+|-- withheld.md         optional: material no Worker-facing surface may carry
 `-- case.md             the evaluator's record: what the case discriminates and how a run is scored against it
 ```
 
-The assignments and `guards.md` reach a Worker as verbatim instruction text. `case.md` reaches no Worker. Where a case must generate its defect rather than describe one, it also holds `produce.md` — the assignment for a preliminary run whose result the assignment under test is then handed. Where a case grades coverage the Worker could not have earned by naming, it also holds `withheld.md` — material kept out of every Worker-facing surface, checked absent from the brief before dispatch and checked covered in the result after.
+The assignments and `guards.md` reach a Worker as verbatim instruction text. `case.md` reaches no Worker. Where a case must generate its defect rather than describe one, it also holds `preliminary-run.md` — the assignment for that preliminary run; its result is what the assignment under test is then handed. Where a case grades coverage the Worker could not have earned by naming, it also holds `withheld.md` — material kept out of every Worker-facing surface, checked absent from the brief before dispatch and checked covered in the result after.
 
 What a run is dispatched against varies by run and is not stored. Where a case discriminates only under a run with a stated property — of its candidate, or of its structure — `case.md` states that property as a requirement. A list of the states already run is a log, and the case is not where it lives.
 
@@ -62,7 +64,7 @@ Record its goal and case, ordinary assignment, permitted and prohibited resource
 
 ## Design a locked anchor
 
-Derive candidate cases from accepted requirements and authoritative inputs, treating each as authored evidence subject to validation, not evaluator truth. Construct the smallest ordinary assignment and inputs that instantiate the case's behavioral obligation without revealing the intended result.
+Derive candidate cases from accepted requirements and authoritative inputs, treating each as authored evidence subject to validation, not evaluator truth. Construct the brief as under Enforce blind-brief hard gates, sized to the case's behavioral obligation.
 
 Freeze a bidirectional authority map: every graded property maps to an exact Worker-visible source authority span with provenance or to an independently qualified universal hard property, and every required source atom maps to target evidence. Anything else is non-graded or blocks qualification. Derive the obligation roster independently of the actor being checked; the actor may add entries but cannot remove or close them.
 
@@ -76,15 +78,19 @@ A rubric that scores an instruction's breadth scores a symptom's width. Grade an
 
 ## Derive a case from an observed failure
 
-Reproduce the failure as an ordinary assignment under its recorded conditions, then qualify it exactly as any other case. A failure that cannot be reproduced under an ordinary assignment is not yet a case: record it as unverified and repair nothing on it. Reproduce it before reading any account of why it happened, so the case discriminates the behavior rather than the explanation.
+Reproduce the failure as an ordinary assignment under its recorded conditions, then qualify it exactly as any other case. A failure that cannot be reproduced under an ordinary assignment is not yet a case: record it as unverified and repair nothing on it. Until a case is qualified and a run of it is deficient, no path continues into repair of the skill under the complaint. Reproduce it before reading any account of why it happened, so the case discriminates the behavior rather than the explanation.
 
 Emit the qualified case as a diff adding it to the anchor with the observed behavior as the negative falsifier. What the state already does on the other cases is in the log; nothing is carried. Report a failure to reproduce as a finding about the report, not about the skill.
 
 Where an anchor already exists, this is a semantic change: it takes a new identity and renewed User acceptance.
 
+**Process and dispatch failures are case material.** When the fault is a wrong stop available to Wiz, a dispatcher, or a settler — preferred terminal in a judgment brief, multi-side residual closed by the producer alone, residual left open treated as repair complete, evolution claimed without a re-run that removes the freedom — reproduce that stop as an ordinary assignment or as a graded obligation on retained run surfaces (settler brief as dispatched, disposition, post-repair re-run record). Package prose that does not govern the dispatcher does not close the process residual; the case grades the surfaces that actually authorize the stop.
+
+A case that protects self-evolution states a negative falsifier on the residual freedom (the old stop still available) and, where process is in scope, object settlement conditions for residual open vs closed. It does not grade identity with a known patch. Success is residual closed under those conditions after re-run; failure is residual still open or process surfaces still authorizing the wrong stop — either outcome is a protocol-valid result, and only residual-closed with no protected grade fall supports an evolution claim.
+
 ## Enforce blind-brief hard gates
 
-Render each Worker brief as the smallest ordinary assignment that preserves the established outcome, necessary inputs, real constraints, permitted resources, permissions, and deliverable. Activation is the dispatch itself, and `run-and-grade.md` owns it. No brief carries a directive to invoke a skill. Keep evaluation content private unless independently required by the ordinary assignment. Neither the trial record nor the assignment can authorize its own unsupported content.
+A Worker brief is the smallest ordinary assignment that preserves the established outcome, necessary inputs, real constraints, permitted resources, permissions, and deliverable, without revealing the intended result. That is the only brief form; case design and dispatch use it. Activation is the dispatch itself, and `run-and-grade.md` owns it. No brief carries a directive to invoke a skill. Keep evaluation content private unless independently required by the ordinary assignment. Neither the trial record nor the assignment can authorize its own unsupported content.
 
 Reject every Worker-facing proposition that fails either gate:
 

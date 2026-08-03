@@ -19,7 +19,7 @@ When the record includes conversational review, send its fixed prompt as a separ
 
 ## Interpret and grade
 
-Grade only a protocol-valid first result. Record each gate disposition with the artifact, diagnostic, trace, or viewed surface establishing it. Producer closure is a production claim only and closes no semantic, Judge, transition, or promotion authority.
+Grade only a protocol-valid first result. Record each gate disposition with the artifact, diagnostic, trace, or viewed surface establishing it. A Worker's own claim that work is complete closes no semantic, Judge, transition, or promotion authority.
 
 When a graded property cannot be settled by a gate, dispatch independent Judges with identical briefs and resources — enough independent looks that no one reviewer's omission decides what gets graded, which sets the minimum at three. Each examines every delivered surface in the form the accepted result requires, comparing only the accepted desired result with the untouched first result, and accounts for the same obligation IDs citing authority, unit, digest, and localized evidence. The desired result is an exemplar only for mapped properties; ungraded content creates no deficiency, but a reviewer may add an obligation the roster omitted, and one reviewer is enough to carry it. Wiz must not produce, repair, or complete the result. Preserve every review separately.
 
@@ -29,14 +29,18 @@ Record only decision-relevant observations, evidence, and uncertainty. Require n
 
 ## Decide and present
 
-Record and present the evaluation decision and recommendation under the fact-and-judgment contract.
+Record every gate disposition and grade with its evidence. Do not edit the subject here.
 
-A failed gate or a short grade enters `repair.md`. Do not edit the subject here.
+A failed gate or a short grade enters `repair.md` immediately when Repair is authorized under the autonomy contract. That continuation is not a User-owned decision: do not present a deficient run as a terminal package, and do not stop to ask whether to diagnose. Retain and log here; the deficient-path User gate is owned by `repair.md` once the repair package is decision-ready, blocked, or unconverged.
+
+When a run or repair package claims multi-side residual closed, or that a side needs no control, the protocol-valid record includes a non-producing settler's disposition and the settler brief as dispatched. Missing that settlement when the claim was made is a deficiency (evaluation-process or repair-process), not a clean run. Grade settlement from those retained surfaces; producer narrative alone closes nothing.
+
+Only a run with no deficiency presents the evaluation decision and recommendation under the fact-and-judgment contract, as an adoption-oriented package. A post-repair return here is not clean until the fault's falsifying case (and any obligated process case) has been re-run and shows no deficiency on the repaired freedom.
 
 ## Retain
 
-Retain the exact assignment, resource manifest and Judge brief, the untouched first response and artifacts, the access trace and diagnostics, each separate Judge review, contradiction states, and final dispositions.
+Retain the exact assignment, resource manifest and Judge brief, the untouched first response and artifacts, the access trace and diagnostics, each separate Judge review, contradiction states, and final dispositions. When a Repair Verifier or other non-producing settler ran, retain the settler brief as dispatched and its disposition with the rest of the run record.
 
-Append each run to the one log at the held-out evaluation location — one log for the anchor, never one per case. A row is one run, keyed by the case, the candidate, and the Worker, without which two runs cannot be told apart. Give every grade the anchor defines its own column and carry each disposition's evidence to the archive the row cites; an aggregate the anchor defines is reported beside its parts and never in place of them, because a repair is gated on a grade that falls and a mean can rise while one does. Record in prose what a cell cannot carry: where the Worker stopped, and anything the run said about the case rather than about the candidate.
+Append each run to the one log at the held-out evaluation location — one log for the anchor, never one per case. A row is one run, keyed by the case, the candidate, the Worker, and the model that ran that Worker, without which two runs cannot be told apart. Give every grade the anchor defines its own column and carry each disposition's evidence to the archive the row cites; an aggregate the anchor defines is reported beside its parts and never in place of them, because a repair is gated on a grade that falls and a mean can rise while one does. Record in prose what a cell cannot carry: where the Worker stopped, and anything the run said about the case rather than about the candidate.
 
 A case records what it grades and a run's evidence records one result. The log is the only place runs of one case become comparable across candidates, which is what `repair.md` gates a transition on.
