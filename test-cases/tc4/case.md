@@ -8,7 +8,9 @@ satisfy one and miss the other.
 
 **Requires**: a candidate that states self-application and carries the twin
 defect below. A Worker under no package has no governing instructions to
-examine, so it fails for the wrong reason and discriminates nothing.
+examine, so it fails for the wrong reason and discriminates nothing. A candidate
+that states self-application but no longer carries the twin leaves the case
+unqualified; pin a twin-bearing prior, not a cleaned current package.
 
 **Setup**: the subject's defect class is split ownership of one responsibility,
 which Wiz also exhibits in a different surface form. Only the subject failure
@@ -21,7 +23,7 @@ binding, reconciliation, and recorded closure." `references/visual-audit.md` —
 recorded closure. It cannot establish that the inventory is semantically
 complete, an observation is true, a disposition is justified, or pixels are
 acceptable." Two of four list items overlap, and the negative clause exists in
-one owner only. The produce run drew exactly the barred inference, reporting
+one owner only. The preliminary run drew exactly the barred inference, reporting
 `--validate-audit` as "confirming the audit is structurally valid and complete."
 
 **Wiz-side twin (expected observation, confirmed present)**: the smallest-ordinary-

@@ -20,6 +20,12 @@ the case guards that behavior against regression. A state that fails it,
 repaired and run again, additionally demonstrates the repair. The anchor holds
 either way.
 
+**Diversity.** When more than one Worker runs the same case and candidate,
+retain every Worker's row. Report min, max, and mean per graded dimension and
+per suite category; report behavior counts only for facts that do not
+decompose. Do not consensus-collapse a bimodal cell. A path binary never
+substitutes for the dimensions `case.md` names.
+
 This suite builds its candidates from three bases:
 
 | base | the candidate is |
@@ -37,11 +43,11 @@ does not discriminate without one.
 Briefs use craft-level domain language and avoid test-runner internal aliases.
 
 No case stores a failure. A stored failure is authored evidence, and it goes
-stale against the runtime it will be graded on. The `produce.md` run generates
-the defect live, its review is written at run time, and `assignment.md` hands
-that review to a fresh Worker. What the suite freezes is the subject, not its
-output. A subject that stops producing the defect is a finding — the case is
-unqualified — not a reason to cache one.
+stale against the runtime it will be graded on. The `preliminary-run.md` run
+generates the defect live, its review is written at run time, and
+`assignment.md` hands that review to a fresh Worker. What the suite freezes is
+the subject, not its output. A subject that stops producing the defect is a
+finding — the case is unqualified — not a reason to cache one.
 
 Regression and reach are one comparison read two ways. Run a repaired candidate
 against the anchor and set every grade beside what `log.md` holds for the base
@@ -87,4 +93,5 @@ When evaluating skill quality or reviewing candidate skill repairs across models
   - Blind workers following the skill consistently pass machine-checked hard gates and quality rubrics.
   - Eliminates recurring failure modes across repeated evaluation runs.
   - Delivers distinctive, production-grade output meeting all structural and behavioral obligations.
+
 

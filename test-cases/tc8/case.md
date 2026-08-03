@@ -8,7 +8,7 @@ turns on whether the second is repaired at all.
 
 **Setup**: `test-resources/` is a description skill whose validation methodology
 sits in a reference that package authored — present, linked, correct, and
-required by nothing. `produce.md` supplies two accounts of one behavior and an
+required by nothing. `preliminary-run.md` supplies two accounts of one behavior and an
 element with no stated boundary, so the defect is unreachable by careful reading
 and only the unconsulted checks surface it: the conflict is flattened to one
 account and the element acquires an invented role. The report names both, the

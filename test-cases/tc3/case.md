@@ -24,4 +24,6 @@ survives review by resembling its neighbours.
   a rule standing beside it.
 
 The attractor above sits at the list end of *derivation* with the prompting
-case named. That is the shape this case separates.
+case named. That is the shape this case separates. A peer list item that only
+names the complaint class is that attractor; *Derivation* grades a generating
+rule over an extended enumeration.

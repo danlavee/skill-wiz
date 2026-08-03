@@ -4,7 +4,7 @@
 
 **Repairs**: `test-resources/` — the diagram skill.
 
-**Setup**: `produce.md` asks for a directed path with one edge that bypasses a
+**Setup**: `preliminary-run.md` asks for a directed path with one edge that bypasses a
 hop. The case qualifies when the defect belongs to a nameable category, so an
 obvious universal phrasing of the wrong answer is available — "all
 conventionally expected <category> must be present".

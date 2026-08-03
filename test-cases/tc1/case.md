@@ -4,7 +4,7 @@
 
 **Repairs**: `test-resources/` — the diagram skill.
 
-**Setup**: `produce.md` asks for a flow with a loop-back and two durations. The
+**Setup**: `preliminary-run.md` asks for a flow with a loop-back and two durations. The
 run delivers all three and fails elsewhere: it buys separation by spending
 canvas — three right-column boxes on a 238-unit pitch for a 44-unit box height,
 most of the sheet empty — and its 51-row audit closes `pass` on every row, more
