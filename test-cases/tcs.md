@@ -94,4 +94,13 @@ When evaluating skill quality or reviewing candidate skill repairs across models
   - Eliminates recurring failure modes across repeated evaluation runs.
   - Delivers distinctive, production-grade output meeting all structural and behavioral obligations.
 
+## Process cases (self-evolution / dispatch)
+
+| case | discriminates (one line) |
+| --- | --- |
+| tc10 | Settler brief: preferred terminal vs object conditions (process) |
+| tc11 | Residual-open / producer-only multi-side treated as complete (process) |
+| tc12 | Evolution/complete without falsifier re-run (process) |
+
+Candidate base for tc10–tc12: live `skill/` (or a frozen prior that already carries residual-open blocks, Stance Neutrality object conditions, and Falsifier Closure). Runs that grade process against a base that lacks those rules are unqualified for the positive path.
 
