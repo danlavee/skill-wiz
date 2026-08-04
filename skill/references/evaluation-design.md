@@ -92,13 +92,20 @@ A case that protects self-evolution states a negative falsifier on the residual 
 
 A Worker brief is the smallest ordinary assignment that preserves the established outcome, necessary inputs, real constraints, permitted resources, permissions, and deliverable, without revealing the intended result. That is the only brief form; case design and dispatch use it. Activation is the dispatch itself, and `run-and-grade.md` owns it. No brief carries a directive to invoke a skill. Keep evaluation content private unless independently required by the ordinary assignment. Neither the trial record nor the assignment can authorize its own unsupported content.
 
+**Surface split (before gates).** Separate every evaluation artifact into exactly one class:
+
+- **Worker-facing** — assignment, permitted resources, case-particular guards, worker-scope, and the activation prompt as assembled. Nothing else.
+- **Evaluator-only** — `case.md`, pass/fail keys, grading rubrics, expected dispositions, diagnosis, residual theory, prior-run path labels (e.g. fail exemplar / correct path), and any text that exists only because the expected result is known.
+
+Evaluator-only material is never copied into a Worker workspace `resources/`, never quoted into the activation prompt, and never “helpfully” restated in the dispatch message.
+
 Reject every Worker-facing proposition that fails either gate:
 
 - **Provenance**: it traces to a source the ordinary assignment independently requires. One that would not exist unless someone knew the expected result, the diagnosis, the grading, or a prior run fails, in whatever form it is carried.
 - **Referential closure**: its actors, authorities, and referents resolve identically for the Worker and for Wiz. A term whose meaning depends on who is reading fails.
 
-Review each brief textually and semantically. Do not dispatch one that teaches, steers, or exposes the evaluation.
+**Contamination disposition (required).** Before a case is dispatch-ready and again before every dispatch of that case, retain a contamination disposition that lists (1) every Worker-facing path or prompt span, (2) every evaluator-only artifact held out, and (3) pass or fail on provenance and referential closure for each Worker-facing surface and for the activation prompt. A fail blocks dispatch and blocks treating the case as qualified for a discrimination claim. A missing disposition is a fail. Self-adjudicated “looks fine” without that retained record is not a disposition. `run-and-grade.md` refuses protocol validity when this disposition is absent or failed at dispatch.
 
 ## Retain
 
-Retain the anchor identity, each case's derivation and verification record, the authority map, the obligation roster, and every brief as dispatched.
+Retain the anchor identity, each case's derivation and verification record, the authority map, the obligation roster, every brief as dispatched, and every contamination disposition (case qualify and each dispatch).
