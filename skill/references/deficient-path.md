@@ -50,23 +50,32 @@ starts from an observed fault.
    Unmask Worker; challenge until load-bearing and stable. Unconverged → record;
    repair nothing on that cause.
 
-6. Freeze residual ledger  [owners: descent.md Freeze + repair.md Form]
+6. Freeze residual ledger  [owners: descent.md Freeze + repair.md Prepare controls]
    Permission class, object conditions, open sides.
 
-7. Residual descent  [owner: descent.md]
+7. Change Request Form (when the explicit control is a package or process Change Request)
+   [owner: proposal-admission.md]
+   Produce the Change Request; run Proposal Admission to **Admit**, then obtain User
+   acceptance of the spans, before descent. Dispose **Admit** alone does not start
+   descent. Not the same as Transaction Form (step 9).
+
+8. Residual descent  [owner: descent.md]
    Explicit control only; D1–D4. partial → refine same proposal; fail/reframe → stop.
+   A Change Request control must already have reached **Admit** and User
+   acceptance of the spans.
 
-8. Form → Gate → Verify → re-run
-   Owner-complete transaction; independent settler; residual open blocks completion.
-   Mandatory falsifier re-run (fault case + obligated process cases).
+9. Transaction Form → Gate → Verify → re-run
+   Owner-complete transaction (Transaction Form); independent settler; residual open
+   blocks completion. Mandatory falsifier re-run (fault case + obligated process cases).
    Owners: repair.md, descent.md, run-and-grade.md.
+   (Proposal Admission already completed at step 7 when a Change Request was required.)
 
-9. Decision-ready package → User gate
-   Grades, convergence, ledger, explicit fixes, Verifier, uncertainty,
-   recommend adopt / apply / stop.
-   Not a gate: bare deficiency, “diagnose?”, mid-loop ideas.
+10. Decision-ready package → User gate
+    Grades, convergence, ledger, explicit fixes, Verifier, uncertainty,
+    recommend adopt / apply / stop.
+    Not a gate: bare deficiency, “diagnose?”, mid-loop ideas.
 
-10. On apply
+11. On apply
     Re-run fault case (+ process cases owed) until clean on that residual.
     Evolution incomplete until Falsifier Closure.
 ```
@@ -79,8 +88,10 @@ starts from an observed fault.
 | Pre-act entry + governing obligations | deficient-path.md | step 0 |
 | Case derive, qualify, surface split, contamination gates | evaluation-design.md | step 2 |
 | Dispatch, protocol validity, grade, residual definition | run-and-grade.md | steps 3–4, residual |
-| Cause converge, transaction, independent verify | repair.md | steps 5–8 |
-| Control admission D1–D4 | descent.md | step 7 |
+| Cause converge, freeze residual ledger | repair.md (+ descent Freeze) | steps 5–6 |
+| Proposal Admission (Change Request Form) | proposal-admission.md | step 7 |
+| Residual descent D1–D4 | descent.md | step 8 |
+| Transaction Form → Gate → Verify | repair.md (+ descent, run-and-grade) | step 9 |
 | Skill authoring without a fault | build.md | not this chain |
 
 New process obligations attach to an owner and a chain step. An obligation with no row above is unordered — do not add it until it has both.
@@ -90,6 +101,7 @@ New process obligations attach to an owner and a chain step. An obligation with 
 | Surface | Who sees it |
 | --- | --- |
 | Fault evidence, case identity, run grades, decision-ready package | User |
+| Change Request Form (opening / termination surfaces, skip rules) | User — owned by `proposal-admission.md`; on this path at step 7 |
 | Interrogation, residual ledger, descent D1–D4, settler briefs | Agent process (retain; do not spam) |
 | Adopt / apply / blocked / unconverged | User gate |
 | “We’re deficient — diagnose?” | Not a User gate when Repair is authorized |
@@ -126,4 +138,5 @@ under Self-Application).
 - Descent D1–D4 criteria — `descent.md`
 - Case derivation and brief gates — `evaluation-design.md`
 - Dispatch and grade — `run-and-grade.md`
-- Build without a fault — `build.md`
+- Build without a fault — `build.md` (package Change Requests also `proposal-admission.md`)
+- Proposal Admission procedure and Change Request User surfaces — `proposal-admission.md`

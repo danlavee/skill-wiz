@@ -7,6 +7,12 @@ Produces a structurally valid package; the successor entry is
 `evaluation-design.md`. Structural validity is workflow hygiene, never evidence
 that the skill works.
 
+When Build produces or revises package instruction text as an explicit Change
+Request (exact spans), run Proposal Admission under `proposal-admission.md` before
+writing those spans into the package. **Admit** plus User acceptance of the spans
+authorizes the write; that path is owned here together with Proposal Admission,
+not by the failure-led adopt/apply gate.
+
 ## Define the skill work
 
 Inspect authoritative sources and formulate a decision-ready skill-work definition before requesting input. This is Wiz's current model of the requested work, not an approval or authority object. Record the desired outcome, activation boundary, inputs, outputs, constraints, fragile decisions, governed-state currency where observable, target runtime, package location, held-out evaluation location, run root, and required resources. Keep design inputs outside held-out evaluation, and evaluation material outside the package: cases and their resources live at the held-out location, carry no read trigger, and are never read by an agent running the skill.

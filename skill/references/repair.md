@@ -31,14 +31,27 @@ successive turns stop changing the answer without reaching it — record that as
 unconverged cause and repair nothing on it. Do not edit the subject before
 convergence, and apply only the converged invariant.
 
-## Form the transaction
+## Prepare controls and bind the transaction
 
-Before binding edits, freeze the residual ledger and run the descent test in
-`descent.md` on every proposed control. Only an admissible (`pass`) control may
-enter Gate, Verify, re-run, or apply. A `partial` result stays on the same
-ledger: refine that proposal and re-test; do not open a new mechanism story. A
-`fail` or reframe is not tested on this ledger. The descent test applies to this
-transaction itself, including process-file edits.
+**Change Request Form** and **Transaction Form** are different steps. Change Request
+Form produces exact package/process spans and runs Proposal Admission
+(`proposal-admission.md`). Transaction Form binds the owner-complete edit set after
+an admissible control exists.
+
+Before binding Transaction Form edits:
+1. Freeze the residual ledger.
+2. State each explicit control. When a control is a package or process Change
+   Request, complete Proposal Admission with Dispose outcome **Admit** and User
+   acceptance of the spans before descent. Dispose **Admit** alone does not start
+   descent. A Guide bind may select **Admit** among disagreeing Review
+   dispositions; Guide bind is not itself **Admit**.
+3. Run the descent test in `descent.md` on every proposed control that is ready
+   for descent. Only an admissible (`pass`) control may enter Gate, Verify,
+   re-run, or apply. A `partial` result stays on the same ledger: refine that
+   proposal and re-test. A `fail` or reframe is not tested on this ledger. The
+   descent test applies to this transaction itself, including process-file edits.
+   Do not run descent on a Change Request that has not yet reached **Admit** and
+   User acceptance of the spans.
 
 **Suggest the actual fix explicitly.** Each proposed control is a concrete
 suggestion, not only a causal story. For every obligation the transaction
@@ -48,6 +61,9 @@ removes; and what evidence would leave residual open vs closed. A ledger that
 names only mechanisms, tenets, or intent without those fields is incomplete —
 refine under the same residual ledger until the suggestion is explicit, or
 record unconverged and repair nothing. Do not Gate on an inexplicit proposal.
+
+Repair owns cause convergence, residual ledger, descent, and Repair Verification
+for failure-led transactions; it does not own Proposal Admission procedure.
 
 Map every affected responsibility to its authoritative owner and bind the edits as one immutable owner-complete transaction. Route every frozen finding exactly once into a conserved obligation ledger disposing each as subject control, target or evaluation control, process or runtime control, or unresolved; assign every supported obligation one control and one owner, and identify every exact replacement and superseded deletion. Do not let evidence disappear because it is unsuitable for the subject skill, and do not use a local wording edit to stand in for a cross-boundary repair.
 
@@ -77,7 +93,7 @@ For an exploratory trial, rerun only its recorded case.
 
 ## Verify independently
 
-Before applying, rerunning, or recommending a repair as complete, dispatch a Repair Verifier as authorized by the autonomy contract. Author the brief under Stance Neutrality. It carries only what settlement requires: authoritative package surfaces to examine, the permission class under review, the owner-complete transaction and multi-side residual claims (including that a side needs no control), fault evidence and canary material needed to test those claims, and the settlement rules in Form the transaction (residual open or closed with a cited control; naming related rules without removing the freedom is not closed; producer narrative is not evidence). Do not load the brief with a preferred terminal (find residual, confirm clearance) or with a dump of every core tenet. Do not tell the Verifier to "be stance-neutral"; satisfy Stance Neutrality by how the brief is written.
+Before applying, rerunning, or recommending a repair as complete, dispatch a Repair Verifier as authorized by the autonomy contract. Author the brief under Stance Neutrality. It carries only what settlement requires: authoritative package surfaces to examine, the permission class under review, the owner-complete transaction and multi-side residual claims (including that a side needs no control), fault evidence and canary material needed to test those claims, and the settlement rules in Prepare controls and bind the transaction (residual open or closed with a cited control; naming related rules without removing the freedom is not closed; producer narrative is not evidence). Do not load the brief with a preferred terminal (find residual, confirm clearance) or with a dump of every core tenet. Do not tell the Verifier to "be stance-neutral"; satisfy Stance Neutrality by how the brief is written.
 
 The Verifier first applies the act-over-artifact test to the recorded mechanism itself: a mechanism stated as a property the deliverable should have had is `fail`, however well its control interrupts it — a control cannot rise above the altitude of the cause it answers. It records the reach and force of each control: one that changes nothing on runs that never exhibited the fault is `fail`, and one whose satisfaction the acting agent adjudicates is `fail`, whatever the wording of either. It then records `pass`, `fail`, or `unverifiable` for every frozen obligation, each disposition citing the preserved finding, authority and owner, old-model counterexample, executed negative falsifier, observed new-model rejection, the logged grades compared against, the movement observed, superseded removal, and residual uncertainty. For each multi-side residual claim it settles residual freedom still open or closed with a cited control that removes that freedom; producer narrative alone is not evidence; naming related tenets without that removal is not closed. It reconciles the ledger against all frozen findings and may add an omitted obligation. Any completion shortcut excluded by the transaction contract, or any disposition without executed exact-candidate evidence, is `unverifiable`.
 

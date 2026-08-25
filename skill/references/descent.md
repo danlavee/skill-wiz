@@ -5,6 +5,10 @@ transition — not of cause convergence (owned by `repair.md`) and not of residu
 settlement after a run (also `repair.md`). Read completely before admitting a
 control to the expensive path.
 
+A control that is a package or process Change Request must already have reached
+**Admit** under `proposal-admission.md` and User acceptance of the spans before
+D1–D4. Descent does not run Proposal Admission.
+
 This file does not claim the search walks to a global fixed point. It removes the
 freedom to spend that path on steps that are not residual descent on a frozen
 measure, and it requires partial results to refine under the same measure rather
@@ -28,7 +32,7 @@ prior residual.
 ## Descent test (eligibility)
 
 The unit under test is an **explicit control suggestion** (owner path, exact
-edit or equivalent, residual freedom named) — see Form the transaction in
+edit or equivalent, residual freedom named) — see Prepare controls and bind the transaction in
 `repair.md`. Mechanism prose alone is not a proposal; score it `partial` or
 `fail` until the suggestion is concrete enough to apply or reject.
 

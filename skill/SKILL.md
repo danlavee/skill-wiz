@@ -14,7 +14,7 @@ rule holds before anyone adopts it.
 1. **Self-Application**: Every rule here governs the skill under edit and Wiz itself; Wiz claims no exemption from a constraint it imposes. What these instructions allow a run to treat as enough is a property of Wiz: when that allowance is wrong, repair the permitting rule, and in the same transaction every side the failure implicated and only those sides. A repair under a governing package does not complete on the named skill alone — dispose the permission class on the governor per `references/repair.md`; multi-side disposition is settled there, not by the producer alone. Confer with the User before a Wiz-side repair moves an established boundary.
 2. **Invariant-Level Instruction**: State each rule at the level of the mechanism it governs, never the case that exposed it. A rule that enumerates the instances it has met, or that would need a new clause for the next instance, is case-derived. Do not answer it by widening scope until the class is covered — a class is a set of symptoms, and covering it yields a wider symptom. Replace it with the rule whose absence permitted the decision; class coverage follows as a consequence and is never the objective.
 3. **Act Over Artifact**: A cause names what the agent accepted as sufficient authority to stop — never what the deliverable should contain. Test: could a Worker satisfy the rule by adding to the deliverable without changing what it checks? If so it is a symptom, and a symptom stated for a whole class is still a symptom. Generality is not depth.
-4. **Removing Choice Over Adding Checks**: Repair by removing a choice, not by adding a check. A check must name what it rejects, so it can only ever be as general as the failures already seen. A definition stated as what a thing is not carries the same bound — it reaches only the negations its author happened to think of and leaves the reader to supply what the thing is. State what it is. Authoring is the same rule before there is a failure to point at: an instruction that adds a check is a patch for a failure not yet observed. Change which paths exist instead. The freedom removed must be one every run holds, not one this run exercised. Test by reach: the instruction changes what runs outside its prompting case do, and one that changes nothing outside that case is a check wearing different words.
+4. **Removing Choice Over Adding Checks**: Change instruction by removing a choice, not by adding a check. A check must name what it rejects, so it can only ever be as general as the failures already seen. A definition stated as what a thing is not carries the same bound — it reaches only the negations its author happened to think of and leaves the reader to supply what the thing is. State what it is. Authoring is the same rule before there is a failure to point at: an instruction that adds a check is a patch for a failure not yet observed. Change which paths exist instead. The freedom removed must be one every run holds, not one this run exercised. Test by reach: the instruction changes what runs outside its prompting case do, and one that changes nothing outside that case is a check wearing different words.
 5. **Upstream of the Decision**: An instruction takes effect before the choice it governs, never after. One that only requires the agent to record or acknowledge something leaves the decision already made and annotates it — the run produces what it always produced, plus a sentence about it. Where judgment cannot be removed, remove instead the freedom to conclude before a required input has been consumed. Test by removal: delete the instruction and name what the run stops producing. If only a record disappears, it had no force. Force ranks by adjudicator distance — the further the standard sits from the agent's own judgment, the more force, and an instruction whose satisfaction the agent adjudicates has none. A self-adjudicated check is the zero-force case by construction.
 6. **Level-Locality**: Three levels exist — Wiz's **process language** (roles, gates, obligations, transactions), the subject skill's **craft language** (the domain terms it must speak to be useful), and **instance data** (this run, input, or artifact). Each level refers to the level below it by role and never by instance: process language says "the subject's domain term", never a domain term; craft language says "the input", never this input. This binds rule text only — evidence, inputs, briefs, assets, and evaluation cases must name instances exactly, where precision is the requirement rather than a violation.
 7. **Uncontaminated Blind Briefs**: Worker-facing material carries only propositions an assignment-giver ignorant of the expected result could have written. Surface split, hard gates, and a retained contamination disposition before dispatch are owned by `references/evaluation-design.md`; a run without a pass disposition is not protocol-valid under `references/run-and-grade.md`.
@@ -65,29 +65,21 @@ An entry names where the User joins, never what may be skipped. When an entry's 
 
 **Convergence is non-negotiable.** Every repair rests on a cause that has converged under the interrogation loop owned by `references/repair.md`; an unconverged cause is recorded and repaired never.
 
-### Deficient path (end-to-end)
+### Failure-led chain
 
-When the work is failure-led, the path is one chain. Order, User surfaces, and
-what counts as an explicit suggestion are owned by
-`references/deficient-path.md`. Step detail remains with each entry owner
-(`evaluation-design.md`, `run-and-grade.md`, `repair.md`, `descent.md`).
+When work is failure-led, follow the chain in `references/deficient-path.md`
+(read completely on this path). That file owns order, User surfaces, Change
+Request Form vs Transaction Form, and the owner map. Do not present mid-loop
+ideas or bare deficiency as the User gate; present when that owner says the
+package is decision-ready (or blocked / unconverged).
 
-```text
-1. Observe a fault (subject, Wiz, or process/dispatch)
-2. Cases — draft/qualify if no case reaches the fault
-3. Run — materialize candidate, dispatch Worker(s), grade
-4. Clean → User adoption; deficient → Repair (no “diagnose?” gate)
-5. Repair — converge cause (interrogation)
-6. Freeze residual ledger (class, object conditions, open sides)
-7. Residual descent — explicit control; D1–D4 (pass / partial→refine / fail)
-8. Form → Gate → Verify (settler) → mandatory falsifier re-run
-9. Decision-ready package → User gate: adopt / apply / stop
-10. On apply → re-run fault case (+ process cases owed) or Repair again
-```
+### Proposal Admission
 
-Read `references/deficient-path.md` completely when entering failure-led work.
-Do not present mid-loop ideas or bare deficiency as the User gate; present when
-that owner says the package is decision-ready (or blocked / unconverged).
+When an explicit package or process Change Request must reach **Admit** and User
+acceptance of the spans before descent, Verify, User gate, or apply, run Proposal
+Admission. Failure-led chain position: deficient-path step 7 (**Change Request Form**,
+not Transaction Form). Procedure, termination, User gates, presentation, Guide bind,
+and Dispose object conditions: `references/proposal-admission.md`. Brief guards apply.
 
 ## Core contract
 
@@ -109,12 +101,25 @@ evidence when required. A Repair Verifier tests cause-to-control completeness
 and multi-side residual disposition; residual open blocks completion. Wiz authors
 that brief under Stance Neutrality and cannot verify its own repair.
 
+Proposal Reviewers dispose Change Requests under Proposal Admission; that process
+is owned by `references/proposal-admission.md` and is not a Repair-only path.
+
+### Brief guards
+
+**Bias guards** and **Leak guards** bind every judgment or review brief Wiz dispatches.
+**Bias guards** also bind Change Request text. **Leak guards** do not — Leak is
+Worker-facing contamination, not package Change Request prose.
+
+**Bias guards** are a sibling of Stance Neutrality: Stance Neutrality forbids a preferred disposition terminal; Bias guards forbid preferred **work-shape** — making instance enumeration the obligation or the success criterion. On every surface they bind, state the governing mechanism and the object settlement conditions that dispose it. Instance naming is allowed only where Level-Locality already requires it — not as enumeration whose coverage satisfies the brief. Fail when deleting that enumeration removes an operative constraint that no mechanism-level clause still carries, or when a recipient could satisfy the text by covering the enumeration without applying the mechanism. Dispatcher fixtures for these fails: `references/evaluation-design.md`.
+
+**Leak guards** enforce Uncontaminated Blind Briefs: Worker-facing material carries only propositions an assignment-giver ignorant of the expected result could have written. Surface split and contamination disposition are owned by `references/evaluation-design.md`. Protocol validity without a pass contamination disposition is owned by `references/run-and-grade.md`.
+
 ### Separate fact from judgment
 
 Record observations with exact evidence. Anything no gate settles is a grade. Never present Wiz's interpretation or grade as ground truth; expose the full decision-ready package, with its recommendation, before any User-owned decision.
 
 A proposed instruction change is subject to the same altitude tests as an
-applied repair (Invariant-Level Instruction, Act Over Artifact, Removing Choice
+applied control (Invariant-Level Instruction, Act Over Artifact, Removing Choice
 Over Adding Checks, Level-Locality, Compression Over Addition). Observed failure
 surfaces are evidence for locating the control; they are not content to enumerate
 into the package. A proposal that still needs a new clause for each new surface

@@ -106,6 +106,19 @@ Reject every Worker-facing proposition that fails either gate:
 
 **Contamination disposition (required).** Before a case is dispatch-ready and again before every dispatch of that case, retain a contamination disposition that lists (1) every Worker-facing path or prompt span, (2) every evaluator-only artifact held out, and (3) pass or fail on provenance and referential closure for each Worker-facing surface and for the activation prompt. A fail blocks dispatch and blocks treating the case as qualified for a discrimination claim. A missing disposition is a fail. Self-adjudicated “looks fine” without that retained record is not a disposition. `run-and-grade.md` refuses protocol validity when this disposition is absent or failed at dispatch.
 
+**Bias and Leak dispatcher fixtures.** Brief guards in SKILL.md name Bias guards
+and Leak guards. Leak fails are disposed by the contamination disposition above
+(Worker-facing vs evaluator-only; provenance and referential closure). Stance
+Neutrality on judgment briefs remains its own tenet; it is not a Leak fixture.
+Bias fails on a Review brief or Change Request body: instance enumeration is the
+obligation or success criterion rather than a stated mechanism and object
+settlement conditions; deleting that enumeration removes an operative constraint
+no mechanism-level clause still carries; or a recipient could satisfy the text by
+covering the enumeration without applying the mechanism. Level-Locality instance
+naming where already required is not a Bias fail. Retain Bias fail notes with the
+Proposal Admission record when the surface is a Change Request, and Bias/Leak fail
+notes with the Proposal Admission record when the surface is a Review brief.
+
 ## Retain
 
-Retain the anchor identity, each case's derivation and verification record, the authority map, the obligation roster, every brief as dispatched, and every contamination disposition (case qualify and each dispatch).
+Retain the anchor identity, each case's derivation and verification record, the authority map, the obligation roster, every brief as dispatched, every contamination disposition (case qualify and each dispatch), and Bias or Leak fail notes when those fixtures are disposed on a brief or Change Request surface.
