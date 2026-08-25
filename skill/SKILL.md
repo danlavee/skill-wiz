@@ -71,7 +71,10 @@ When work is failure-led, follow the chain in `references/deficient-path.md`
 (read completely on this path). That file owns order, User surfaces, Change
 Request Form vs Transaction Form, and the owner map. Do not present mid-loop
 ideas or bare deficiency as the User gate; present when that owner says the
-package is decision-ready (or blocked / unconverged).
+package is decision-ready (or blocked / unconverged). Which held-out cases to
+run for a change: the suite roster under Case selection in
+`references/evaluation-design.md` — **active** vs **library** by trigger, not
+every case on disk every time.
 
 ### Proposal Admission
 

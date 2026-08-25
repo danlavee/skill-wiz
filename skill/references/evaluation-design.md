@@ -8,6 +8,19 @@ successor entry is `run-and-grade.md`.
 Evaluate whether a skill helps an Agent achieve the accepted goal under ordinary
 conditions. Do not test whether the Agent can infer the preferred result.
 
+## Case selection
+
+When the held-out suite ships a **roster**, that roster owns which cases exist,
+their tier (**active** / **library** / merged), what each discriminates, and
+**Run when** triggers. The evaluation record or suite layout names where the
+roster lives — not this package. Select cases by matching the Change Request,
+residual, or claim to those triggers; run the union of matches. Broad or
+unspecified “does the suite still hold?” claims run the **active** set only
+(hard cap on active count so Worker cost stays bounded). **Library** cases run
+when their trigger matches — not on every package bump. Do not treat every case
+on disk as mandatory for every run. Record which roster rows were selected and
+why in the run evidence.
+
 ## Size the evaluation
 
 An exploratory trial supports early behavioral evidence only. Use a locked evaluation for acceptance, comparison, or generalization claims, or when simpler evidence cannot discriminate. Scale the design and retained evidence to the intended claim and uncertainty. Dispatch requires authority under the autonomy contract.
