@@ -1,5 +1,7 @@
 # Skill Wiz
 
+![Skill Wiz](assets/skill-wiz.jpg)
+
 **Skills that get better. Self-evolving. No hand-waving.**
 
 When a skill fails, Skill Wiz finds the rule that allowed the miss, changes it,
