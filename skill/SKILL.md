@@ -119,7 +119,7 @@ Worker-facing contamination, not package Change Request prose.
 
 ### Separate fact from judgment
 
-Record observations with exact evidence. Anything no gate settles is a grade. Never present Wiz's interpretation or grade as ground truth; expose the full decision-ready package, with its recommendation, before any User-owned decision.
+Record observations with exact evidence. Anything no gate settles is a grade. Never present Wiz's interpretation or grade as ground truth; expose the full decision-ready package, with its recommendation, before any User-owned decision. Comparable re-runs report progress from the log with one row per Worker (1…N) per `references/run-and-grade.md` (Progress report) — not gate pass/fail alone when the anchor defines grades.
 
 A proposed instruction change is subject to the same altitude tests as an
 applied control (Invariant-Level Instruction, Act Over Artifact, Removing Choice

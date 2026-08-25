@@ -46,3 +46,30 @@ Retain the exact assignment, resource manifest and Judge brief, the contaminatio
 Append each run to the one log at the held-out evaluation location — one log for the anchor, never one per case. A row is one run, keyed by the case, the candidate, the Worker, and the model that ran that Worker, without which two runs cannot be told apart. Give every grade the anchor defines its own column and carry each disposition's evidence to the archive the row cites; an aggregate the anchor defines is reported beside its parts and never in place of them, because a repair is gated on a grade that falls and a mean can rise while one does. Record in prose what a cell cannot carry: where the Worker stopped, and anything the run said about the case rather than about the candidate.
 
 A case records what it grades and a run's evidence records one result. The log is the only place runs of one case become comparable across candidates, which is what `repair.md` gates a transition on.
+
+## Progress report
+
+After a comparable re-run (new candidate, post-apply, or post-package change), report **progress** from the log — not only gate pass/fail. A suite or decision-ready package that claims re-run quality without this comparison has not reported progress.
+
+**Worker.** Diversity is design, not a fixed N: one row per Worker that ran that case and candidate. Label Workers **1, 2, 3, …** in dispatch order (or the run’s own stable ids). Common design is three Workers; one or more than three is valid when the run records it. Never collapse Workers into a single “pass” or majority vote; retain every row; report min, max, and mean only beside the parts.
+
+**Row template** (one row per case × candidate × Worker × model; grade columns = every grade the locked anchor defines — names and scale from the anchor, not invented here):
+
+```text
+| Candidate | Case | Worker | Model | <grade₁> | … | <gradeₖ> | Case score | Baseline | Δ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| <id> | <case> | 1 | <model> | … | … | … | <mean or anchor aggregate> | <log value or —> | <signed or —> |
+| <id> | <case> | 2 | … | … | … | … | … | … | … |
+| <id> | <case> | N | … | … | … | … | … | … | … |
+```
+
+**Required beside the table**
+
+- Candidate identity (e.g. package tip / base + changes).
+- Worker count **N** for each cell (how many rows share that case × candidate).
+- Cell summary when N > 1: mean (min–max) per graded column the anchor compares; do not drop a bimodal cell.
+- Baseline: the log row(s) this re-run is compared to (prior candidate or named baseline); **Δ** per compared grade and case score, or explicit “no baseline.”
+- Protected-grade falls: any compared grade that fell vs baseline, named — blocks clean evolution / repair transition per `repair.md`.
+- Gates and process falsifiers: report separately as gate dispositions; do not substitute a binary suite PASS for missing ordinal rows when the anchor defines grades.
+
+When the anchor defines only gates for a case, the progress report states those dispositions and “no ordinal grades on this case.” When it defines grades, binary PASS alone is incomplete reporting.
