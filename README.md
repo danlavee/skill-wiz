@@ -2,7 +2,7 @@
 
 ![Skill Wiz](assets/skill-wiz.jpg)
 
-**Skills that get better. Self-evolving. No hand-waving.**
+**Better skills under evidence. No hand-waving.**
 
 When a skill fails, Skill Wiz finds the rule that allowed the miss, changes it,
 and checks that the miss is gone. It holds itself to the same bar.
