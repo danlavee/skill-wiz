@@ -62,6 +62,7 @@ Coverage is judged against the failure, not against the package: an anchor that 
 **A bare deficiency is not a User gate.** When a protocol-valid run is deficient and Repair remains authorized under the autonomy contract, continue into `references/repair.md` before any User-owned decision. Present once the package is decision-ready: clean-run adoption, or a verified repair transaction, or an explicit blocked or unconverged repair. Do not stop to ask whether to diagnose.
 
 An entry names where the User joins, never what may be skipped. When an entry's precondition is unmet, fall back to the entry that produces it and say so; a claim that outruns the entries actually run is unsupported. Read the entry's owner file completely before acting inside it, and apply the core contract below in every one.
+The skill-dev tree is named in `references/skill-dev.md`.
 
 **Convergence is non-negotiable.** Every repair rests on a cause that has converged under the interrogation loop owned by `references/repair.md`; an unconverged cause is recorded and repaired never.
 

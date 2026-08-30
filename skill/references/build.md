@@ -15,7 +15,7 @@ not by the failure-led adopt/apply gate.
 
 ## Define the skill work
 
-Inspect authoritative sources and formulate a decision-ready skill-work definition before requesting input. This is Wiz's current model of the requested work, not an approval or authority object. Record the desired outcome, activation boundary, inputs, outputs, constraints, fragile decisions, governed-state currency where observable, target runtime, package location, held-out evaluation location, run root, and required resources. Keep design inputs outside held-out evaluation, and evaluation material outside the package: cases and their resources live at the held-out location, carry no read trigger, and are never read by an agent running the skill.
+Inspect authoritative sources and formulate a decision-ready skill-work definition before requesting input. This is Wiz's current model of the requested work, not an approval or authority object. Record the desired outcome, activation boundary, inputs, outputs, constraints, fragile decisions, governed-state currency where observable, target runtime, package location, cases location, evals location, and required resources. Those locations are the `skill/`, `cases/`, and `evals/` roots named in `skill-dev.md`. Keep design inputs outside cases and evals, and evaluation material outside the package: cases and their resources live at the cases location; runs and grade tables live at the evals location; both carry no read trigger for an agent running the skill.
 
 The activation boundary is the condition separating callers who need the skill from those who do not, stated in the caller's language. The skill's own methods, internals, and role vocabulary do not appear in it, and the description renders that condition and nothing else.
 
@@ -32,6 +32,8 @@ Keep Skill Wiz itself instruction-only. Permit a target skill to include executa
 ## Compose the package
 
 Use the smallest package allowed by the target runtime:
+
+The package is the `skill/` root of the skill-dev tree named in `skill-dev.md`.
 
 ```text
 skill-name/
