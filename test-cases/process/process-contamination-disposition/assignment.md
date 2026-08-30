@@ -5,13 +5,13 @@ You do not edit the package.
 
 ## Materials (read only these)
 
-1. `resources/fixtures/dispatch-without-disposition.md`
-2. `resources/fixtures/dispatch-with-disposition.md`
+1. `resources/dispatch-without-disposition.md`
+2. `resources/dispatch-with-disposition.md`
 3. `resources/records/R1.md`
 4. `resources/records/R2.md`
-5. `candidate/references/evaluation-design.md` — section **Enforce blind-brief hard gates** (including surface split and contamination disposition)
-6. `candidate/references/run-and-grade.md` — section **Run blind work** only
-7. `candidate/SKILL.md` — core tenet **Uncontaminated Blind Briefs** only
+5. `skills/skill-wiz/references/evaluation-design.md` — section **Enforce blind-brief hard gates** (including surface split and contamination disposition)
+6. `skills/skill-wiz/references/run-and-grade.md` — section **Run blind work** only
+7. `skills/skill-wiz/SKILL.md` — core tenet **Uncontaminated Blind Briefs** only
 
 Do not read any other files under resources or outside this workspace.
 
@@ -30,4 +30,4 @@ Overall for each record: `protocol_valid` / `not_protocol_valid` / `unverifiable
 
 ## Output
 
-Write exactly: `../evidence/DISPOSITION.md`
+Write exactly: `DISPOSITION.md`

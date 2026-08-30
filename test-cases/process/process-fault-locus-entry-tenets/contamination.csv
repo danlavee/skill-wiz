@@ -1,0 +1,12 @@
+path,class,provenance,closure,disposition
+assignment.md,worker-facing,pass,pass,pass
+../../worker-scope.md,worker-facing,pass,pass,pass
+inputs/worker-origin-signal.md,worker-facing,pass,pass,pass
+inputs/origin-signals/,evaluator-only,-,-,-
+case.md,evaluator-only,-,-,-
+CONTAMINATION-DISPOSITION.md,evaluator-only,-,-,-
+SURFACE-SPLIT.md,evaluator-only,-,-,-
+ORIGIN.md,evaluator-only,-,-,-
+EVALUATOR-KEY.md,evaluator-only,-,-,-
+PLAIN-LANGUAGE.md,evaluator-only,-,-,-
+records/,evaluator-only,-,-,-

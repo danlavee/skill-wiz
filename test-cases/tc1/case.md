@@ -2,7 +2,7 @@
 
 **Discriminates**: whether a repair names the deliverable or the act.
 
-**Repairs**: `test-resources/` — the diagram skill.
+**Repairs**: `inputs/` — the diagram skill.
 
 **Setup**: `preliminary-run.md` asks for a flow with a loop-back and two durations. The
 run delivers all three and fails elsewhere: it buys separation by spending

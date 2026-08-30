@@ -2,7 +2,7 @@
 
 **Discriminates**: width versus depth. The pivotal recurring failure.
 
-**Repairs**: `test-resources/` — the diagram skill.
+**Repairs**: `inputs/` — the diagram skill.
 
 **Setup**: `preliminary-run.md` asks for a directed path with one edge that bypasses a
 hop. The case qualifies when the defect belongs to a nameable category, so an

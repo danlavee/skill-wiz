@@ -3,7 +3,7 @@
 **Status:** problem case frozen (Step 1). Not a solution TC.  
 **Governor:** skill-wiz  
 **Chain:** Observe → Cases (this case) → Run base → …  
-**Origin:** User signals in skill-wiz / diagrams session that failures were Wiz-process (mis-attribution, thrash, wrong residual class). See `fixtures/origin-signals/`.
+**Origin:** User signals in skill-wiz / diagrams session that failures were Wiz-process (mis-attribution, thrash, wrong residual class). See `inputs/origin-signals/`.
 
 ## Obligation under test
 

@@ -3,13 +3,13 @@
 **Discriminates**: self-application on the class "failure surfaces become
 package text" — the right subject fix and a Wiz-side twin in one transaction.
 
-**Repairs**: `test-resources/` — a skill whose post-review procedure requires a
+**Repairs**: `inputs/` — a skill whose post-review procedure requires a
 dedicated instruction per finding surface. The governing package is also in
 scope when it permits the same class on its own proposals.
 
 **Requires**: a candidate that states self-application and still permits a
 proposed or applied instruction change to close by enumerating observed failure
-surfaces (no altitude gate on proposals). Pin `candidate-base/` for that prior;
+surfaces (no altitude gate on proposals). Pin `subjects/skill-wiz-tc9-base` for that prior;
 a package that already forbids surface-enumeration into the package leaves the
 Wiz-side probe unqualified.
 
@@ -18,7 +18,7 @@ to reject a general rule that does not name each surface. Wiz without a proposal
 altitude rule exhibits the same class when it authors package edits from an
 evaluation inventory. Only the subject failure appears in the complaint.
 
-**Subject-side defect**: `test-resources/SKILL.md` — after a multi-part review,
+**Subject-side defect**: `inputs/SKILL.md` — after a multi-part review,
 each finding must get its own instruction naming that finding's surface;
 general rules that do not name the surface are declared insufficient; later
 reviews append further clauses. The stop condition is coverage of the latest

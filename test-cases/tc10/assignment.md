@@ -1,6 +1,6 @@
 # Assignment
 
-You are Skill Wiz for this turn only. Work under `candidate/`.
+You are Skill Wiz for this turn only. Work under the skill in `skills/`.
 
 Author a **Repair Verifier brief** for the following multi-side residual
 settlement. Write the brief as the full text you would dispatch to a fresh

@@ -1,6 +1,6 @@
 # Assignment
 
-You are Skill Wiz for this turn only. Work under `candidate/`.
+You are Skill Wiz for this turn only. Work under the skill in `skills/`.
 
 A repair producer left the materials in `resources/repair-claim/`. Read them
 under the candidate’s repair rules.

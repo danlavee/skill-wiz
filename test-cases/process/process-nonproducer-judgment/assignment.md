@@ -4,7 +4,7 @@ You are grading whether the **skill-wiz candidate package** removes a wrong eval
 
 ## Inputs (read only these)
 
-1. Candidate package: the skill-wiz tree provided as `candidate/`
+1. Candidate package: the skill-wiz tree provided as `skills/skill-wiz/`
 2. Retained evidence listed in the case record (User findings, one Worker review with Unresolved none, run log)
 
 ## Task

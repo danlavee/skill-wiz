@@ -26,13 +26,12 @@ per suite category; report behavior counts only for facts that do not
 decompose. Do not consensus-collapse a bimodal cell. A path binary never
 substitutes for the dimensions `case.md` names.
 
-This suite builds its candidates from three bases:
+This suite builds its candidates from two bases:
 
 | base | the candidate is |
 | --- | --- |
-| `none` | absent — the Worker runs under no package |
-| a prior | an earlier Wiz state, copied from where the run's evidence records it |
-| `skill/` | Wiz as it currently stands, copied at run time |
+| a prior | an earlier Wiz state, unpacked into `skills/` from that run's tars |
+| `skill/` | Wiz as it currently stands, packed as a tar and unpacked into `skills/` |
 
 Which base a run uses, and what was applied on top, is that run's setup and is
 recorded in its evidence. `case.md` states a requirement only where the case

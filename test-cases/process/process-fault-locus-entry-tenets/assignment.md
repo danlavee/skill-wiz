@@ -9,4 +9,4 @@ Answer these questions about the process record. Use only the files in your work
 3. Does the process record name **applicable tenets** (or an equivalent small set of governing rules) for that entry? (yes / no / partial — quote if yes)
 4. Overall: does the process record **correctly handle** a Wiz-process origin? (handles / does_not_handle)
 
-Write your answers to `evidence/DISPOSITION.md` in your workspace.
+Write your answers to `DISPOSITION.md` in your working folder.

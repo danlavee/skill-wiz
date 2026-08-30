@@ -2,7 +2,7 @@
 
 **Discriminates**: derivation versus response.
 
-**Repairs**: `test-resources/` — a code-review skill whose six lenses are each
+**Repairs**: `inputs/` — a code-review skill whose six lenses are each
 an enumeration.
 
 **Setup**: a complaint about a defect no lens covers. Concurrency appears in

@@ -2,7 +2,7 @@
 
 **Discriminates**: whether the cause is extracted or manufactured.
 
-**Repairs**: nothing — `test-resources/`, a system-description skill, is run,
+**Repairs**: nothing — `inputs/`, a system-description skill, is run,
 not edited.
 
 **Requires**: two runs in sequence. The first produces the deficiency that

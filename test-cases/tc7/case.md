@@ -5,7 +5,7 @@ that only shortens it.
 
 **Repairs**: the `description` frontmatter field of the candidate.
 
-**Requires**: the run's candidate is built from `candidate-base/`, a Wiz state
+**Requires**: the run's candidate is built from a prior Wiz state (`subjects/skill-wiz-tc7-base`), a Wiz state
 whose description enumerates operations and whose `build.md` states no rule
 authoring it, and the assignment lists the candidate among what it acts on.
 

@@ -1,0 +1,6 @@
+path,class,provenance,closure,disposition
+assignment.md,worker-facing,pass,pass,pass
+../worker-scope.md,worker-facing,pass,pass,pass
+preliminary-run.md,worker-facing,pass,pass,pass
+inputs/,worker-facing,pass,pass,pass
+case.md,evaluator-only,-,-,-

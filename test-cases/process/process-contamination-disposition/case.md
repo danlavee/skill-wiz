@@ -30,7 +30,7 @@ G1–G4 pass on package; R1 record = not protocol-valid; R2 record = disposition
 
 | Path | Role |
 |---|---|
-| `fixtures/dispatch-without-disposition.md` | R1 input |
-| `fixtures/dispatch-with-disposition.md` | R2 input |
+| `inputs/dispatch-without-disposition.md` | R1 input |
+| `inputs/dispatch-with-disposition.md` | R2 input |
 | `records/R1.md` | Process run: dispatched without disposition |
 | `records/R2.md` | Process run: disposition retained pass, then dispatch |

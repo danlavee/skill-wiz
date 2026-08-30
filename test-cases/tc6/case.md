@@ -3,7 +3,7 @@
 **Discriminates**: whether the search for a defect has a termination condition,
 or runs until it finds one.
 
-**Repairs**: `test-resources/`, a system-description skill — or, if the
+**Repairs**: `inputs/`, a system-description skill — or, if the
 complaint does not reproduce, nothing. The package the Worker works under is not
 among its resources, so editing it is outside the assignment.
 

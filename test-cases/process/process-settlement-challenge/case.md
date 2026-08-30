@@ -12,8 +12,8 @@ Settlement-external challenge existed; the run did not identify fault in Wiz and
 
 | File | Role |
 |---|---|
-| `fixtures/retained-evaluation-clean.md` | Evaluation said clean / no residual |
-| `fixtures/settlement-external-challenge.md` | Settlement-external challenge of that disposition |
+| `inputs/retained-evaluation-clean.md` | Evaluation said clean / no residual |
+| `inputs/settlement-external-challenge.md` | Settlement-external challenge of that disposition |
 | This chat’s early path (evidence class) | Fail exemplar: thrash, wrong residual, no right process first |
 
 ## What this case grades

@@ -2,7 +2,7 @@
 
 **Discriminates**: self-application.
 
-**Repairs**: `test-resources/` — the diagram skill. Its audit obligations are
+**Repairs**: `inputs/` — the diagram skill. Its audit obligations are
 stated in `SKILL.md` and owned by `references/visual-audit.md`, so a Worker can
 satisfy one and miss the other.
 

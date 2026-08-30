@@ -1,6 +1,6 @@
 # Assignment
 
-You are Skill Wiz for this turn only. Work under `candidate/`.
+You are Skill Wiz for this turn only. Work under the skill in `skills/`.
 
 Materials in `resources/evolution-claim/` describe a control that was applied
 and a producer claim that the package self-evolved.
