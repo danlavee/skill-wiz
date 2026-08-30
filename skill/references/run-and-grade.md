@@ -11,9 +11,52 @@ a governed element no longer holds.
 
 ## Run blind work
 
-Apply the brief gates owned by `evaluation-design.md` before dispatch — including surface split and a **retained contamination disposition** that passes. Do not dispatch when that disposition is missing or failed. A run that dispatches without a retained pass disposition is **not protocol-valid**; its grades open no Repair and support no discrimination or evolution claim.
+Apply the brief gates owned by `evaluation-design.md` before dispatch — including surface split and a **retained contamination disposition** that passes. The retained record is the case's `contamination.csv`, re-confirmed on the assembled prompt. Do not dispatch when that disposition is missing or failed. A run that dispatches without a retained pass disposition is **not protocol-valid**; its grades open no Repair and support no discrimination or evolution claim.
 
-Materialize the run as `evaluation-design.md` specifies, then dispatch each Worker it calls for in one call. That call is the whole of activation: its working directory is that Worker's `workspace/`, and its prompt is the assignment, `assets/worker-scope.md`, and any case-particular limits, assembled verbatim in that order. Nothing else activates the Worker — no host command naming an installed package, no evaluator-only content, no residual or pass theory, and no part of the assignment held back for a later turn. The runtime's own skill mechanism resolves by installed name, so a run that used it could not say what governed the Worker. Copy into `resources/` only what the assignment requires to act on (Worker-facing only). Record the candidate's base, every change applied, and the contamination disposition before dispatch: a run whose candidate or contamination record cannot be reconstructed is not protocol-valid. Hold recorded conditions constant across comparable runs. Preserve the initial response, actions, artifacts, trace, and state before any follow-up. Do not coach a failed Agent, use coached work as evidence, or permit consequential action beyond the recorded boundary. Keep raw artifacts separate from Wiz-authored instructions.
+Materialize each run under the evals root named in `skill-dev.md`. Durable or
+temporary is recorded as the evals location in the skill-work definition.
+
+A run has a monotonic integer identity. First dispatch: `run-<n>`. Same
+identity again: `run-<n>-b`, then `-c` (no `-a`). A re-grade is not a
+re-dispatch.
+
+```text
+evals/run-<n>/
+|-- run.csv
+|-- candidates/
+`-- <case-id>/
+    `-- worker-<m>/
+        `-- workspace/
+            |-- assignment.md
+            |-- worker-scope.md
+            |-- guards.md            optional
+            |-- skills/
+            `-- resources/           optional
+```
+
+`run.csv` lists the tars and hashes, cases, worker count, and models.
+Unpack each tar into `skills/<name>/`. The Worker follows those copies, never
+the host install or the live package. A skill the assignment follows is a tar
+in `candidates/`. A skill the Worker acts on without following it is an input
+in `resources/`.
+
+Copy `cases/worker-scope.md` to workspace `worker-scope.md`. Copy the
+assignment the case uses into the workspace as `assignment.md`. Copy
+`guards.md` and `inputs/` → `resources/` only when the case has them.
+
+Create every `worker-<m>` directory for every case before any dispatch.
+A workspace with `skills/` missing or empty is a terminated run. Do not
+dispatch it.
+
+Activation is one call: cwd is that `workspace/`; prompt is the assignment,
+`worker-scope.md`, and any `guards.md`, verbatim, in that order. Do not
+activate by installed name.
+
+Record the tar hashes, the changes in those tars, and the contamination
+disposition before dispatch. A run that cannot be reconstructed from that
+record is not protocol-valid.
+
+Hold recorded conditions constant across comparable runs. Preserve the initial response, actions, artifacts, trace, and state before any follow-up. Do not coach a failed Agent, use coached work as evidence, or permit consequential action beyond the recorded boundary. Keep raw artifacts separate from Wiz-authored instructions.
 
 When the record includes conversational review, send its fixed prompt as a separate turn after the initial result is preserved, never as part of the assignment. Use it to expose the Agent's goal model, account of work, experienced difficulty, completion judgment, and unresolved gaps. Permit no result change afterward and grade the reflection separately. Self-assessment is evidence about the Agent's model, not verification of the result, and it opens the interrogation loop rather than settling it.
 
