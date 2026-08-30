@@ -72,9 +72,8 @@ When work is failure-led, follow the chain in `references/deficient-path.md`
 Request Form vs Transaction Form, and the owner map. Do not present mid-loop
 ideas or bare deficiency as the User gate; present when that owner says the
 package is decision-ready (or blocked / unconverged). Which held-out cases to
-run for a change: the suite roster under Case selection in
-`references/evaluation-design.md` — **active** vs **library** by trigger, not
-every case on disk every time.
+run for a change: Case selection in `references/evaluation-design.md` — skill
+chooses the run set from the suite **case map**; the map inventories only.
 
 ### Proposal Admission
 
