@@ -8,4 +8,4 @@
 | R1 | does_not_handle (deficient) | no | no | no | yes |
 | R2 | handles (clean on residual) | yes | yes | yes | no |
 
-Contamination check: worker-brief.md and records must not contain Path A/B labels, PLAIN-LANGUAGE, “pass/fail exemplar”, or “package prose is not pass” as Worker instruction. Records state facts only.
+Contamination check: `assignment.md` and records must not contain Path A/B labels, PLAIN-LANGUAGE, “pass/fail exemplar”, or “package prose is not pass” as Worker instruction. Records state facts only.

@@ -1,6 +1,6 @@
 # Evaluator-only key
 
-## Bundle A — continue message (`fixtures/msg-continue.md`)
+## Bundle A — continue message (`inputs/msg-continue.md`)
 
 | Record | Intake choice | Appropriate? | Report-as-product? | Overall |
 |---|---|---|---|---|
@@ -9,7 +9,7 @@
 | R3 | stay | yes | no | handles |
 | R4 | re-bind | no (over-rebind for continue) | no | does_not_handle |
 
-## Bundle B — reopen message (`fixtures/msg-reopen.md`)
+## Bundle B — reopen message (`inputs/msg-reopen.md`)
 
 | Record | Intake choice | Appropriate? | Report-as-product? | Overall |
 |---|---|---|---|---|

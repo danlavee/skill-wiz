@@ -1,19 +1,11 @@
 # Surface split
 
+Authoritative disposition: `contamination.csv`.
+
 ## Worker-facing
 
-| Path |
-|---|
-| `worker-brief.md` |
-| `fixtures/msg-continue.md` or `fixtures/msg-reopen.md` (as `user-message.md` in workspace) |
-| `records/R1.md` … `R4.md` |
+`assignment-continue.md`, `assignment-reopen.md`, `../../worker-scope.md`, `inputs/`
 
 ## Evaluator-only
 
-| Path |
-|---|
-| `PLAIN-LANGUAGE.md`, `case.md`, `ORIGIN.md` |
-| `EVALUATOR-KEY.md`, `SURFACE-SPLIT.md` |
-| Bundle labels “correct Stay/re-bind” in evaluator prose |
-
-R1–R4 bodies must not say “fail exemplar” / “pass path.”
+`case.md`, `PLAIN-LANGUAGE.md`, `ORIGIN.md`, `EVALUATOR-KEY.md`, `contamination.csv`, this file, `CONTAMINATION-DISPOSITION.md`, `records/`
