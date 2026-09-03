@@ -16,18 +16,21 @@ Change Request may mix shapes. This is **Change Request Form**, not Transaction 
 
 ## Steps
 
-1. **Form** — Produce the Change Request (retained). When the User is in the
+1. **Form** — Produce the Change Request. The Guide retains it. When the User is in the
    loop and has not skipped the opening surface, the first Form is a User gate:
    Review does not start until the User approves or returns feedback that
    revises Form. When the User has skipped the opening surface, Review may
    start on the retained Form. Later Forms after **Refine** are not User gates.
 2. **Review** — Default N = 3 Proposal Reviewers dispose against the governing
-   obligations for the proposal class; record N when it differs; retain every
-   disposition. Author and dispatch Review briefs under Bias guards, Leak
-   guards, and Instructional Isolation (SKILL.md Brief guards; fixtures in evaluation-design.md). Each
-   retained disposition records pass/fail as a distinct field on every Admit
-   object condition, not only in prose. A fail on any of those fields precludes
-   **Admit** from that Reviewer (**Refine** or **Reject** per object conditions).
+   obligations for the proposal class; record N when it differs. Author and
+   dispatch Review briefs under Bias guards, Leak guards, and Instructional
+   Isolation (SKILL.md Brief guards; fixtures in evaluation-design.md). Review
+   **activation** is that brief; **retain** of dispositions is Guide-side after
+   dispose — Reviewers are not assigned to discover, open, or update the retain
+   tree. Each retained disposition records pass/fail as a distinct field on
+   every Admit object condition, not only in prose. A fail on any of those
+   fields precludes **Admit** from that Reviewer (**Refine** or **Reject** per
+   object conditions).
 3. **Bind** — Do not adopt by consensus or majority. When dispositions disagree,
    the Guide records a Guide bind that cites which retained dispositions it
    follows and which it does not.
@@ -80,6 +83,6 @@ A Core Tenet governs Change Request text when its object is instruction the Afte
 | **Reject** | Wrong residual or requirement; an Admit object-condition fail that cannot be cured by revise; or a fail that needs a different proposal identity |
 | **Unverifiable** | Materials insufficient to dispose |
 
-Retain every Review disposition, the Guide bind when used, the Dispose outcome,
-fail notes for every Admit object condition on the Change Request when disposed,
-and Bias/Leak fail notes from the Review brief when disposed.
+The Guide retains every Review disposition, the Guide bind when used, the Dispose
+outcome, fail notes for every Admit object condition on the Change Request when
+disposed, and Bias/Leak fail notes from the Review brief when disposed.
